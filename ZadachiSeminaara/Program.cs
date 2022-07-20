@@ -1,6 +1,6 @@
-﻿double[,] RandomD2Array(int rows, int columns, int minValue, int maxValue)
+﻿int[,] RandomD2Array(int rows, int columns, int minValue, int maxValue)
 {
-    double[,] newArray = new double[rows,columns];
+    int[,] newArray = new int[rows,columns];
     for (int i = 0; i < rows; i++)
         for (int j = 0; j < columns; j++)
             newArray[i,j] = new Random().Next(minValue, maxValue + 1);
@@ -20,7 +20,7 @@ double[,] RandomD2ArrayDouble(int rows, int columns, int minValue, int maxValue)
     
 }
 
-void ShowD2Array(double[,] array)
+void ShowD2Array(int[,] array)
 
 {
     for (int i = 0; i < array.GetLength(0); i++)
@@ -72,7 +72,7 @@ if(array.GetLength(0) == array.GetLength(1))
     return -1;                
 }
 
-double[,] PoiskChisla2D(double[,] array, double chislo)
+double[,] PoiskChisla2D(int[,] array, double chislo)
 {
     double[,] newArray = new double[10,2]; newArray[0,0] = -1; newArray[0,1] = -1; int str = 0;
     for (int i = 0; i < array.GetLength(0); i++)
@@ -98,7 +98,7 @@ void PrintMasIntIndex (double[,] array)
     
 }
 
-double[] SummaPoStolbcam (double[,] array)
+double[] SummaPoStolbcam (int[,] array)
 {
     double[] sumArray = new double[array.GetLength(1)];
    
@@ -181,14 +181,14 @@ System.Console.Write(SumEllementsArray(myArray));
 */
 
 //## Задача 47. Задайте двумерный массив размером m×n, заполненный случайными вещественными числами.
-/*
+
 System.Console.Write("Input number of rows: ");
 int m = Convert.ToInt32(Console.ReadLine());
 System.Console.Write("Input number of columns: ");
 int n = Convert.ToInt32(Console.ReadLine());
 double[,] myArray = RandomD2ArrayDouble(m, n, 1, 9);
 ShowD2ArrayDouble(myArray);
-*/
+
 
 //## Задача 50. Напишите программу, которая на вход принимает позиции элемента в двумерном массиве,
 //и возвращает значение этого элемента или же указание, что такого элемента нет.
@@ -197,7 +197,7 @@ System.Console.Write("Input number of rows: ");
 int m = Convert.ToInt32(Console.ReadLine());
 System.Console.Write("Input number of columns: ");
 int n = Convert.ToInt32(Console.ReadLine());
-double[,] myArray = RandomD2Array(m, n, 1, 9);
+int[,] myArray = RandomD2Array(m, n, 1, 9);
 ShowD2Array(myArray);
 System.Console.Write("Введите искомое число: ");
 int ch = Convert.ToInt32(Console.ReadLine());
@@ -205,15 +205,14 @@ PrintMasIntIndex(PoiskChisla2D (myArray, ch));
 */
 
 //## Задача 52. Задайте двумерный массив из целых чисел. Найдите среднее арифметическое элементов в каждом столбце.
-
+/*
 System.Console.Write("Input number of rows: ");
 int m = Convert.ToInt32(Console.ReadLine());
 System.Console.Write("Input number of columns: ");
 int n = Convert.ToInt32(Console.ReadLine());
-double[,] myArray = RandomD2Array(m, n, 1, 9);
+int[,] myArray = RandomD2Array(m, n, 1, 9);
 double[] rez = SummaPoStolbcam(myArray);
 ShowD2Array(myArray);
-//PrintMasDouble(rez);
 PrintMasDouble(SredneArifm(rez,m));
-
+*/
 
